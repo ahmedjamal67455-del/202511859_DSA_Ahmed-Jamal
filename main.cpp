@@ -2,34 +2,33 @@
 #include <vector>
 
 int main() {
-    // 1. Store the chosen number and initialize variables
-    int chosenNumber = 7; // [cite: 16, 17]
-    int userGuess = 0;    // [cite: 18]
-    std::vector<int> history; // [cite: 19]
+    int chosenNumber = 7; 
+    int userGuess = 0;    
+    std::vector<int> history; 
 
-    // 2. While loop runs as long as the guess is incorrect
-    while (userGuess != chosenNumber) { // [cite: 20]
+    
+    while (userGuess != chosenNumber) { 
         std::cout << "Enter a number: ";
-        std::cin >> userGuess; // [cite: 22, 23]
+        std::cin >> userGuess; 
 
-        // Save the value into the list immediately
-        history.push_back(userGuess); // [cite: 24]
+        
+        history.push_back(userGuess); 
 
-        // 3. Compare the guess with the chosen number
+        
         if (userGuess > chosenNumber) {
-            std::cout << "Too high" << std::endl; // [cite: 26]
+            std::cout << "Too high" << std::endl; 
         }
         else if (userGuess < chosenNumber) {
-            std::cout << "Too low" << std::endl; // [cite: 27]
+            std::cout << "Too low" << std::endl; 
         }
         else {
-            std::cout << "Correct" << std::endl; // [cite: 28]
+            std::cout << "Correct" << std::endl; 
         }
     }
 
-    // 4. After the loop, display all guesses using a for loop
+    
     std::cout << "Your guess history:" << std::endl;
-    for (int i = 0; i < history.size(); i++) { // [cite: 29]
+    for (int i = 0; i < history.size(); i++) { 
         std::cout << history[i] << " ";
     }
     std::cout << std::endl;
